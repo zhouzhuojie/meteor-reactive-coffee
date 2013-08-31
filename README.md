@@ -21,12 +21,14 @@ See official documentation [here](http://yang.github.io/reactive-coffee/quicksta
 
 ##### APIs
 
-* rx.meteor.find(_collection_, _selector_, _options_)
+* rx.meteor.find( _collection_, _selector_, _options_)
     * returns `rx.array`, and each element in the array is an regular object
     * use `.all()` to fetch all the elements in the `rx.array`
-* rx.meteor.findOne(_collection_, _selector_, _options_)
+* rx.meteor.findOne( _collection_, _selector_, _options_)
     * returns `rx.cell`
     * use `.get()` to fetch the element in the `rx.cell`
+
+_collection_ should be an instance of Meteor.Collection.
 
 Please refer to official api to learn more about `rx.array` and `rx.cell`, [doc](http://yang.github.io/reactive-coffee/api.html). 
 
