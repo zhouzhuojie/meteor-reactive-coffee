@@ -38,6 +38,7 @@ Please refer to official api to learn more about `rx.array` and `rx.cell`, [doc]
 Highly recommended for `coffeescript` lovers.
 
 * 0) Initialization and importTags
+
 ```
 Meteor.startup ->
   bind = rx.bind    # shorthand for bind function
@@ -45,19 +46,21 @@ Meteor.startup ->
 ```
 
 * 1) Populate Meteor.Collection instance to a `rx.array` or `rx.cell`, e.g.
+
 ```coffeescript
 todos = rx.meteor.find Todo, {}, {sort: {created: -1}}          # returns rx.array
 latestTodo = rx.meteor.findOne Todo, {}, {sort: {created: -1}}  # returns rx.cell
 ```
 
 * 2) Hook/Bind to Html elements
+
 ```coffeescript
 $('foo').prepend(
   span {}, bind -> [latestTodo.get().title]
   div {}, bind -> todos.all().map (todo) ->
     div todo.title
 )
-``` 
+```
 
 * 3) CRUD operation on Meteor.Collection will automatically reflect on `rx.array` or `rx.cell` instance. For example:
 
