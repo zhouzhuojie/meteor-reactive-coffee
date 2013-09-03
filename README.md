@@ -41,7 +41,7 @@ Highly recommended for `coffeescript` lovers.
 
 ```
 Meteor.startup ->
-  bind = rx.bind    # shorthand for bind function
+  window.bind = rx.bind    # shorthand for bind function
   rxt.importTags()  # import p, span, div, etc. tags as functions into the namespace
 ```
 
