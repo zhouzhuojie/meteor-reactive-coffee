@@ -7,6 +7,8 @@ Reactive-coffee for Meteor
 
 ### Install
 
+Make sure you have Meteor and Meteorite installed.
+
 ```bash
 mrt add reactive-coffee
 ```
