@@ -1,5 +1,6 @@
 Package.describe({
-  summary: "Reactive-coffee for Meteor"
+  summary: "Reactive-coffee for Meteor",
+  version: "0.0.6"
 });
 
 Package.on_use(function (api) {
