@@ -1,4 +1,4 @@
-Reactive-coffee for Meteor
+Reactive-coffee for Meteor [![Build Status](https://travis-ci.org/zhouzhuojie/meteor-reactive-coffee.svg?branch=master)](https://travis-ci.org/zhouzhuojie/meteor-reactive-coffee)
 ==============
 
 ## Introduction
@@ -10,12 +10,12 @@ Reactive-coffee for Meteor
 Make sure you have Meteor and Meteorite installed.
 
 ```bash
-mrt add reactive-coffee
+meteor add mrt:reactive-coffee
 ```
 
 ### Usage
 
-#### Basic Usage `rx`, `rxt`
+#### Basic Usage `rx`, `rx.rxt`
 
 See official documentation [here](http://yang.github.io/reactive-coffee/quickstart.html). We also built a Meteor demo site: [Reactive-Coffee-Demo.meteor.com](http://reactive-coffee-demo.meteor.com)
 
@@ -44,7 +44,7 @@ Highly recommended for `coffeescript` lovers.
 ```
 Meteor.startup ->
   window.bind = rx.bind    # shorthand for bind function
-  rxt.importTags()  # import p, span, div, etc. tags as functions into the namespace
+  rx.rxt.importTags()  # import p, span, div, etc. tags as functions into the namespace
 ```
 
 * 1) Populate Meteor.Collection instance to a `rx.array` or `rx.cell`, e.g.

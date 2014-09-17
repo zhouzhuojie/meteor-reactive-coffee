@@ -1,9 +1,11 @@
 Package.describe({
   summary: "Reactive-coffee for Meteor",
-  version: "0.0.6"
+  version: "0.1.0",
+  git: "https://github.com/zhouzhuojie/meteor-reactive-coffee.git",
+  name: "mrt:reactive-coffee"
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
   api.use('jquery', 'client');
   api.use('underscore', 'client');
   api.use('coffeescript', ['client', 'server']);
@@ -14,4 +16,10 @@ Package.on_use(function (api) {
   if (api.export){
     api.export(['rx', 'rxt'], 'client');
   }
+});
+
+Package.onTest(function(api) {
+  api.use('tinytest');
+  api.use('mrt:reactive-coffee');
+  api.addFiles('mrt:reactive-coffee-tests.js', 'client');
 });
