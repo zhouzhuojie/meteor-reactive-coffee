@@ -71,5 +71,4 @@ Todo.update todo._id, {$set: {isCompleted: true}}
 ```
 
 ## Thanks
-
 Thanks for [yang/reactive-coffee](https://github.com/yang/reactive-coffee)
