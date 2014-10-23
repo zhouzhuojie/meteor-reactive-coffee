@@ -6,9 +6,9 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.use('jquery', 'client');
-  api.use('underscore', 'client');
-  api.use('coffeescript', ['client', 'server']);
+  api.use('jquery@1.0.0', 'client');
+  api.use('underscore@1.0.0', 'client');
+  api.use('coffeescript@1.0.0', ['client', 'server']);
   api.add_files('global-import.js', 'client');
   api.add_files('reactive-coffee/dist/reactive-coffee.min.js', 'client');
   api.add_files('main.js', 'client');
